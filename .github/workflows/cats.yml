@@ -9,5 +9,5 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - run: echo testomng 123
-      - run: echo ${{ toJSON(github.events.pull_request) }}
+      - run: echo ${{ fromJSON(github.events.pull_request) }}
         
