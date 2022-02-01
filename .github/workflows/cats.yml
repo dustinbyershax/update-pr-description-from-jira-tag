@@ -9,4 +9,5 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - run: ls -a
+      - run: echo ${{ fromJSON(github) }}
         
