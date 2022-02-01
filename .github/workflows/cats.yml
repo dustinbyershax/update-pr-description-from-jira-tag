@@ -8,6 +8,5 @@ jobs:
       - uses: actions/checkout@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-      - run: echo testomng 123
-      - run: echo ${{ fromJSON(github.events.pull_request) }}
+      - run: echo ${{fromJSON(github.events)}}
         
