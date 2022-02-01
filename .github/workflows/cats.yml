@@ -9,5 +9,5 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - run: ls -a
-      - run: echo "${{ toJSON(github) }}"
+      - run: echo "${{ toJSON(github.event.pull_request.base) }}"
         
