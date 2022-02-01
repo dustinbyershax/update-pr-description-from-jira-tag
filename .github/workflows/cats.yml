@@ -1,0 +1,13 @@
+name: cats
+on: pull_request
+
+jobs:
+  build: # make sure build/ci work properly
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - run: ls -a
+      - run: echo "${{ toJSON(github.event.pull_request.body) }}"
+        
