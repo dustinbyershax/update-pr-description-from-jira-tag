@@ -8,5 +8,5 @@ jobs:
       - uses: actions/checkout@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-      - run: echo "${{fromJSON(github.events)}}"
+      - run: echo ${{github.events}}"
         
